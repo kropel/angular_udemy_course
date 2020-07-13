@@ -11,13 +11,16 @@ export class ServersComponent implements OnInit {
   classNames = 'btn btn-primary';
   serverCreation = 'Noserver creating';
   serverName = 'Test Server';
+  serverCreated = false;
+  servers = ['TestServer', 'Testserver 2'];
   constructor() {
     setTimeout(() => {
       this.allowNewServer = true;
     }, 3000);
   }
   onCreateServer(e) {
-    console.log(e);
+    this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreation = `Server was created. Name is ${this.serverName}`;
   }
   onUpdateServerName(event: Event) {

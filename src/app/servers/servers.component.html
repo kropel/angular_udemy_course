@@ -24,7 +24,7 @@
 >
   Add Server
 </button>
-<p>{{ serverCreation }}</p>
+<p *ngIf="serverCreated; else noServer">{{ serverCreation }}</p>
+<ng-template #noServer><p>No server was created</p></ng-template>
 <p [innerText]="allowNewServer"></p>
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>

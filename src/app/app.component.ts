@@ -6,12 +6,23 @@ import { Component } from '@angular/core';
   // styleUrls: ['./app.component.css'],
   styles: [
     `
-      h3 {
-        color: darkblue;
+      .whiteColor {
+        color: white;
       }
     `,
   ],
 })
 export class AppComponent {
-  name = 'radek';
+  showPassword = false;
+  now = Date.now();
+  timeBetwinClicks = [];
+  onClickHandler() {
+    let now = Date.now();
+    this.timeBetwinClicks.push((now - this.now) / 1000);
+    this.now = now;
+    this.showPassword = !this.showPassword;
+  }
+  isIndexGreater(index, num) {
+    return index > num;
+  }
 }
