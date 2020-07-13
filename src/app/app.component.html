@@ -1,27 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-xs-6">
-      <!-- <h3>I'm in the AppComponent</h3>
-      <hr />
-      <app-servers></app-servers>
-      <hr />
-      <app-succesAlert-component></app-succesAlert-component>
-      <hr />
-      <app-warningAlert-component></app-warningAlert-component> -->
-      <button class="btn btn-info" (click)="onClickHandler()">
-        Display Details
-      </button>
-      <p *ngIf="showPassword">Secrtet Password = tuna</p>
-    </div>
-    <div class="col-xs-6">
-      <label>Time betwin clicks:</label>
-      <p
-        *ngFor="let time of timeBetwinClicks; index as i"
-        [ngStyle]="{ backgroundColor: isIndexGreater(i, 4) && 'blue' }"
-        [ngClass]="{ whiteColor: isIndexGreater(i, 4) }"
-      >
-        {{ i + 1 }}. {{ time }} s.
-      </p>
+    <div class="col-xs-12">
+      <h1>App component</h1>
     </div>
   </div>
 </div>
